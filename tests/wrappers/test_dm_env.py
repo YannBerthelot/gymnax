@@ -15,9 +15,9 @@ def test_dmenv_wrapper():
 
     reset_fn = jax.vmap(wrapped_env.reset, in_axes=(0,))
     timesteps = reset_fn(keys)
-    chex.assert_tree_all_equal_shapes(o, timesteps.observation)
-    chex.assert_tree_all_equal_shapes(r, timesteps.reward)
-    chex.assert_tree_all_equal_shapes(d, timesteps.discount)
+    chex.assert_trees_all_equal_shapes(o, timesteps.observation)
+    chex.assert_trees_all_equal_shapes(r, timesteps.reward)
+    chex.assert_trees_all_equal_shapes(d, timesteps.discount)
 
     step_fn = jax.vmap(wrapped_env.step, in_axes=(0, 0, 0))
     new_timesteps = step_fn(keys, timesteps, action)
