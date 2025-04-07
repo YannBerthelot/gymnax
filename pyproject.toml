@@ -8,13 +8,11 @@ readme = "README.md"
 
 [tool.poetry.dependencies]
 python = ">=3.10,<4.0"
-jax = "^0.5.3"
-jaxlib = "^0.5.3"
-chex = "^0.1.89"
-flax = "^0.10.5"
+jax = ">=0.4.20"
+jaxlib = ">0.4.20"
 pyyaml = "^6.0.2"
 gym = ">=0.26"
-gymnasium = "^1.1.1"
+gymnasium = ">=0.28"
 matplotlib = "^3.10.1"
 seaborn = "^0.13.2"
 
