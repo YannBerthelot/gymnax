@@ -15,7 +15,7 @@ gym = ">=0.26"
 gymnasium = ">=0.28"
 matplotlib = ">=3.0"
 seaborn = "^0.13.2"
-chex = "^0.1.89"
+chex = ">=0.1.0"
 flax = ">=0.7.5"
 
 
