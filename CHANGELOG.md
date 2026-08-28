@@ -1,5 +1,8 @@
 ### [Unreleased]
 
+- Removed the `jax<0.7` and `gymnasium<1.2` upper bounds so Gymnax can be
+  installed alongside downstream packages that require newer versions.
+
 - Added a concise Gymnax 1.0 migration summary to the README.
 - Added a persistent `LogWrapper` validity signal that distinguishes reset
   placeholders from completed-episode returns and lengths.
