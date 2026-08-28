@@ -151,7 +151,7 @@ In order to use JAX on your accelerators, you can find more details in the [JAX 
 
 ## Supported versions
 
-Gymnax supports CPython 3.10–3.13, JAX and JAXlib 0.6.x, and Gymnasium 1.1.x.
+Gymnax supports CPython 3.10–3.14, JAX and JAXlib 0.6 and newer, and Gymnasium 1.1 and newer.
 Other dependency versions may work, but are not part of the tested support matrix.
 
 ## Examples 📖
