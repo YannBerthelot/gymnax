@@ -6,7 +6,7 @@ authors = [{ name = "Robert Tjarko Lange", email = "robertlange0@gmail.com" }]
 readme = "README.md"
 license = "Apache-2.0"
 license-files = ["LICENSE"]
-requires-python = ">=3.10,<3.14"
+requires-python = ">=3.10"
 dependencies = [
     "jax>=0.6",
     "flax",
@@ -38,7 +38,7 @@ test = [
     "minatar",
 ]
 visualize = [
-    "gymnasium[classic-control]>=1.1,<1.2",
+    "gymnasium[classic-control]>=1.1",
 ]
 
 [project.urls]
@@ -50,6 +50,9 @@ include = ["gymnax*"]
 
 [tool.ruff]
 exclude = ["examples"]
+# ruff >=0.16 also formats Markdown code blocks; keep the formatter
+# scoped to Python, as it was under the previously locked 0.11.
+extend-exclude = ["*.md"]
 target-version = "py310"
 line-length = 88
 indent-width = 4
