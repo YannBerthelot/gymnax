@@ -1,11 +1,17 @@
 ### [Unreleased]
 
-- Removed the `jax<0.7` and `gymnasium<1.2` upper bounds so Gymnax can be
-  installed alongside downstream packages that require newer versions.
-- Added Python 3.14 support, and CI coverage for the newly allowed
-  dependency range: the matrix now spans 3.10-3.14 (resolving jax 0.6.2
-  through 0.11.1), with extra lanes pinning the jax releases the lock skips
-  (0.7, 0.8, 0.9) and the declared gymnasium floor.
+- Widened the `jax` and `gymnasium` upper bounds (to `<0.12` and `<1.4`) so
+  Gymnax can be installed alongside downstream packages requiring newer
+  versions, while keeping advertised support bounded to combinations CI
+  covers.
+- Added Python 3.14 support. The 3.14 window is narrower than the rest --
+  jax `>=0.8.1`, flax `>=0.12.3`, gymnasium[classic-control] `>=1.3` -- and is
+  declared with environment markers, so unsupported combinations fail
+  resolution rather than installation.
+- Extended CI over the newly allowed range: the matrix spans 3.10-3.14, with
+  extra lanes pinning the jax releases the lock skips (0.7, 0.8, 0.9), the
+  declared gymnasium floor (1.1) and the 1.2 series, and a Python 3.14 lane
+  installing exactly the marker-encoded 3.14 minima.
 
 - Added a concise Gymnax 1.0 migration summary to the README.
 - Added a persistent `LogWrapper` validity signal that distinguishes reset
