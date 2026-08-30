@@ -152,11 +152,11 @@ In order to use JAX on your accelerators, you can find more details in the [JAX 
 ## Supported versions
 
 Gymnax supports CPython 3.10–3.14, JAX and JAXlib 0.6–0.11, and Gymnasium 1.1–1.3.
-On CPython 3.14 the window narrows to JAX 0.8.1+, Flax 0.12.3+ and
-Gymnasium 1.3+, which are the first releases with working 3.14 support; this is
-declared with environment markers, so unsupported combinations fail to resolve
-rather than failing at import. Other dependency versions may work, but are not
-part of the tested support matrix.
+On CPython 3.14 the window narrows to JAX 0.8.1+ and Flax 0.12.3+; the
+`visualize` extra additionally requires Gymnasium 1.3+ for its Python 3.14
+renderer. These constraints are declared with environment markers, so
+unsupported combinations fail to resolve rather than failing at import. Other
+dependency versions may work, but are not part of the tested support matrix.
 
 ## Examples 📖
 * 📓 [Environment API](examples/00_getting_started.ipynb) - Get started with the basic `gymnax` API.
